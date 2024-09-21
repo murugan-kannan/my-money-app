@@ -15,9 +15,9 @@ export default function Home() {
     const n = investmentDuration * 12;
     const r = annualReturnRate / 100 / 12;
 
-    let totalInvestment = monthlyInvestment * n;
-    let maturityValue : number  = monthlyInvestment * (((1 + r) ** n - 1) / r) * (1 + r);
-    let returns = maturityValue - totalInvestment;
+    const totalInvestment = monthlyInvestment * n;
+    const maturityValue : number  = monthlyInvestment * (((1 + r) ** n - 1) / r) * (1 + r);
+    const returns = maturityValue - totalInvestment;
 
     setMaturityAmount(parseFloat(maturityValue.toFixed(2)));
     setTotalInvested(parseFloat(totalInvestment.toFixed(2)));
